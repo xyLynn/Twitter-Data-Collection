@@ -24,10 +24,10 @@ from nltk.stem import WordNetLemmatizer
 # In[2]:
 
 
-ACCESS_TOKEN = "2378032825-QNQ4zETCM2hcIuP80deSHGdTXcrzE7vysvkdcNz"
-ACCESS_TOKEN_SECRET = "JIoaBDifICUapIXWGE1x636itkIrHHxs7he0WwiClY6kv"
-CONSUMER_KEY = "xU5CZUCtq2jNiopmogUvegudT"
-CONSUMER_SECRET = "goL8kGtG5MMe5oKjivh3MT6Ic88iajrjqJ26NpJj5upiJFB3Pa"
+ACCESS_TOKEN = ""
+ACCESS_TOKEN_SECRET = ""
+CONSUMER_KEY = ""
+CONSUMER_SECRET = ""
 
 
 # In[3]:
@@ -90,7 +90,7 @@ def replace_urls(in_string, replacement=None):
     Returns:
         str
     """
-    replacement = '' 
+    replacement = ''
     pattern = re.compile('(https?://)?(\w*[.]\w+)+([/?=&]+\w+)*')
     return re.sub(pattern, replacement, in_string)
 
@@ -387,7 +387,7 @@ df_comb.info()
 # In[193]:
 
 
-with pd.ExcelWriter('output.xlsx') as writer: 
+with pd.ExcelWriter('output.xlsx') as writer:
     retweet_df.to_excel(writer, sheet_name='Retweet')
     data_df.to_excel(writer, sheet_name='Raw Data')
     df_comb.to_excel(writer, sheet_name='Combination')
@@ -396,7 +396,3 @@ with pd.ExcelWriter('output.xlsx') as writer:
 
 
 # In[ ]:
-
-
-
-
